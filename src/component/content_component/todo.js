@@ -10,9 +10,11 @@ class ToDoManager extends React.Component {
 		}
 		this.captureTask=this.captureTask.bind(this)
 		this.addTask=this.addTask.bind(this)
+		this.deleteTask=this.deleteTask.bind(this)
 	}
 	
 	captureTask=function(event){
+		event.preventDefault()
 		console.log(event.target.value)
 		this.setState({capturetasks:event.target.value})
 		console.log(this.state.capturetasks)
@@ -24,10 +26,16 @@ class ToDoManager extends React.Component {
 		this.state.capturetasks=""
 	}
 
+	deleteTask=function(index){
+		console.log("delete... "+ index)
+		this.setState({savetasks: this.state.savetasks.splice(index, 1)})
+		console.log(this.state.savetasks)
+	}
+
 	renderAllTasks=function(){
-		return this.state.savetasks.map((task)=>{
+		return this.state.savetasks.map((task,index)=>{
 			return (
-				<li>{task}   <button>-</button></li>
+				<li  key={index}> {task}   <button onClick={()=>this.deleteTask(index)}>-</button></li>
 			) 
 		})
 	}
