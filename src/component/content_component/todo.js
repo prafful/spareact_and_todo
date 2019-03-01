@@ -28,7 +28,8 @@ class ToDoManager extends React.Component {
 
 	deleteTask=function(index){
 		console.log("delete... "+ index)
-		this.setState({savetasks: this.state.savetasks.splice(index, 1)})
+		this.state.savetasks.splice(index, 1)
+		this.setState({savetasks: this.state.savetasks})
 		console.log(this.state.savetasks)
 	}
 
