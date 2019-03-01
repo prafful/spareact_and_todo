@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FlipMove from "react-flip-move";
+
 class ToDoManager extends React.Component {
 	
 	constructor(props){
@@ -43,16 +45,20 @@ class ToDoManager extends React.Component {
 
     render() { 
         return (  
-            <div>      
+            <div  className="todoapp">       
                 <div>To DO Manager Application</div>
+				<div className="addtask">
 					<label>Add:</label>
 					<input type="text" onChange={this.captureTask} value={this.state.capturetasks}></input>
 					<button onClick={this.addTask}>Add Task</button>
+				</div>
 					<br></br>
 					Task List:
 					<br></br>
-					<ol>
-						{this.renderAllTasks()}
+					<ol className="taskitems">
+						<FlipMove  duration={500} easing="ease-in">  
+							{this.renderAllTasks()}
+						</FlipMove>
 					</ol>
 					
             </div>

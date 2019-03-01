@@ -1,3 +1,6 @@
+body{
+    background-color: aqua;
+}
 .header li{ 
     background-color: wheat;
     list-style: none;
@@ -14,5 +17,43 @@
 
 .content{
     background-color: aqua;
-    height: 100px;
+    height: 100%;
+}
+
+
+.todoapp .addtask input{
+   padding: 5px; 
+   border: 1px solid yellow;
+   width:200px;
+}
+
+.todoapp .addtask  button{
+    padding: 10px;
+    margin:10px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border:2px solid goldenrod;
+}
+
+.todoapp .addtask  button:hover{
+    padding: 10px;
+    margin:10px;
+    background-color: hotpink;
+    color: brown;
+    cursor: pointer;
+    border:2px solid goldenrod;
+}
+
+.todoapp .taskitems  li{
+    color:blueviolet;
+    background-color: bisque;
+    padding: 10px;
+    margin:10px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.todoapp .taskitems  {
+   width: 200px;
+    list-style: none;
 }
