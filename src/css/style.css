@@ -1,0 +1,18 @@
+.header li{ 
+    background-color: wheat;
+    list-style: none;
+    display: inline;
+}
+
+.header li a{
+    color: tomato;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.content{
+    background-color: aqua;
+    height: 100px;
+}
